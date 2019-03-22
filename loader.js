@@ -20,6 +20,9 @@ function loader() {
   const scriptTag = document.createElement("script");
   scriptTag.setAttribute("src", jsFile);
 
+  // dynamic script tags are always loaded asynchronously so this is unnecessary
+  //scriptTag.setAttribute("async", true);
+
   const cssTag = document.createElement("link");
   cssTag.setAttribute("rel", "stylesheet");
   cssTag.setAttribute("href", cssFile);
