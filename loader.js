@@ -1,7 +1,7 @@
 // This file would be automatically generated' LATEST_JS_HASH & LATEST_CSS_HASH would need to be interpolated
 // the respective identifiers below
 const LATEST_JS_HASH = '64973a9455df';
-const LATEST_CSS_HASH = 'f678da22ba4d';
+const LATEST_CSS_HASH = '4fe4b31d9efd';
 
 // for reference, these are the vesion hashes
 // # JS
@@ -10,6 +10,7 @@ const LATEST_CSS_HASH = 'f678da22ba4d';
 // - v3 64973a9455df
 // $ CSS
 // - v1 f678da22ba4d
+// - v2 4fe4b31d9efd
 
 
 function loader() {
