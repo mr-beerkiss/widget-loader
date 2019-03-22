@@ -19,3 +19,18 @@ see/use.
 For example, the `el` variable defined on line 3 of JS v2 and higher cannot be accessed via the global scope because
 it is enclosed.
 
+# Hosting
+
+Using such a solution, you only need a single S3 bucket to store all generated application JS/CSS since they are 
+fingerprinted.  You could then have development/production `loader.js` files in the bucket for managign the current
+version for that environment, eg
+
+- `/dev/loader.js` → Loads `app.js` v12, which was built off a feature branch
+- `/prod/loader.js` → Loads `app.js` v8, which was built off off the master
+
+Thus, changes in feature branches might change the version `/dev/loader.js` points to, but only builds off the master
+will update `/prod/loader.js`
+
+In cases where HTML is server-side rendered, an alternative approach is to supply the end-user with a JSON file 
+that contains the version manifest which shows previous versions and the current one.  A sample is defined in 
+[assets-manifest.json](./assets-manifest.json)
