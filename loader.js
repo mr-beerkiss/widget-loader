@@ -30,16 +30,7 @@ function loader() {
   body.appendChild(scriptTag);
 }
 
-window.onload = function() {
+window.addEventListener("load", function(e) {
   loader();
-}
-
-document.addEventListener("widgetReady", function(e) {
-  const { widget } = e.detail;
-  widget.init(document.querySelector('p'));
-  widget.greet();
 });
 
-// export {
-//   loader
-// };
