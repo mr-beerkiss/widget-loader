@@ -1,11 +1,12 @@
 // This file would be automatically generated' LATEST_JS_HASH & LATEST_CSS_HASH would need to be interpolated
 // the respective identifiers below
-const LATEST_JS_HASH = '79efcbe44854';
+const LATEST_JS_HASH = 'fddc68952911';
 const LATEST_CSS_HASH = 'f678da22ba4d';
 
 // for reference, these are the vesion hashes
 // # JS
 // - v1 79efcbe44854
+// - v2 fddc68952911
 // $ CSS
 // - v1 f678da22ba4d
 
@@ -34,6 +35,7 @@ window.onload = function() {
 
 document.addEventListener("widgetReady", function(e) {
   const { widget } = e.detail;
+  widget.init(document.querySelector('p'));
   widget.greet();
 });
 
